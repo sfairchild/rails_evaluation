@@ -10,15 +10,26 @@
 <%= form_with(scope: @new_item, url: list_items_path(@list)) do |new_item| %>
   <table class='table'>
     <tbody>
-      <% @list.items.each do |item| %>
+      <% @sorted_items.each do |item| %>
         <tr>
           <td><%= item.name %></td>
+          <td>
+            <% item.tags.each do |tag| %>
+              <%= link_to tag.name , '',  class: 'btn btn-primary' %>
+            <% end %>
+          </td>
           <td><%= link_to content_tag(:i, nil, class: 'fa fa-trash'), [@list, item], method: :delete, class: 'btn btn-danger' %></td>
         </tr>
       <% end %>
 
       <tr>
         <td><%= new_item.text_field :name %></td>
+        <td class="form-group">
+          <% @tags.each do |tag| %>
+            <%= check_box_tag 'tag_ids[]', tag.id -%>
+            <%= h tag.name -%>
+          <% end %>
+        </td>  
         <td>
           <%= button_tag type: 'submit', class: 'btn btn-primary' do %>
             <i class='fa fa-plus' aria-hidden="true"></i>
