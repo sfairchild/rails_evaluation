@@ -7,7 +7,7 @@
 * bootstrap 4
 * Font Awesome
 
-This is a small rails app with only 2 models, a List and an Item. YOu can create, edit, delete and view lists. You can only create and delete items.
+This is a small rails app with only 2 models, a List and an Item. You can create, edit, delete and view lists. You can only create and delete items.
 
 This test will test your coding style and ability to read the existing code. Follow the steps and submit your results.
 
