@@ -46,13 +46,13 @@ Test 1: In the list show page. Ensure the items are displayed in ascending order
 
 Bonus Test:(Not required, but if you have time give it a shot) Create a toggle to change between ascending and descending order.
 
-#### Story 3 
+~~#### Story 3 ~~
 
-***Bonus - ___complete only if you have time___***
+~~***Bonus - ___complete only if you have time___***~~
 
-As a user, I would like to create tags on items. Items can have multiple tags and tags can belong to multiple items. For this exercise we will use a predefined list of tags. You can use the seed file for creating you list. Your tags will be ['important', 'nice to have', 'idea', 'task']
+~~As a user, I would like to create tags on items. Items can have multiple tags and tags can belong to multiple items. For this exercise we will use a predefined list of tags. You can use the seed file for creating you list. Your tags will be ['important', 'nice to have', 'idea', 'task']~~
 
-Test 1. When I create a new item, allow me to assign tags with a list of checkboxes.
+~~Test 1. When I create a new item, allow me to assign tags with a list of checkboxes.~~
 
-Test 2. After an item is created, list the tags next to the item name.
+~~Test 2. After an item is created, list the tags next to the item name.~~
 
