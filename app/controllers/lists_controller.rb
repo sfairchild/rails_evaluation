@@ -1,12 +1,16 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+  # helper_method :sort_column, :sort_direction
 
   def index
     @lists = List.all
   end
 
+
   def show
     @new_item = Item.new
+    @tags = Tag.all
+    @sorted_items = @list.items.order('lower(name)')
   end
 
   def new
@@ -51,4 +55,13 @@ class ListsController < ApplicationController
     def list_params
       params.require(:list).permit(:name, :description)
     end
+
+    # def sort_column
+    #   List.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    #   # @list.items.order('lower(name)')
+    # end
+    #
+    # def sort_direction
+    #   %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+    # end
 end

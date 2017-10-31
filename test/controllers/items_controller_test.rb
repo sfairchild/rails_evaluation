@@ -4,11 +4,12 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @list = lists(:main)
     @list.items = [items(:first), items(:second)]
+    # @list.item
   end
 
   test "should create list" do
     assert_difference('Item.count') do
-      post list_items_url(@list), params: { item: { name: 'New Item' } }
+      post list_items_url(@list), params: { item: { name: 'New Item' }, tag_ids: ["1", "2"] }
     end
 
     assert_redirected_to list_url(@list)
