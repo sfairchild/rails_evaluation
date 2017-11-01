@@ -23,6 +23,16 @@
     <%= content_tag(:small, 'Name of your new list', class: 'form-text text-muted') %>
   </div>
 
+  <% for item in @list.items %>
+    <%= fields_for "list[item_attributes][]", item do |item_form| %>
+      <div class="form-group">
+        <p>
+          Task: <%= item_form.text_field :name %>
+        </p>
+      </div>
+    <% end %>
+  <% end %>
+
   <div class="actions">
     <%= form.submit class: 'btn btn-primary' %>
     <%= link_to 'Back', list.id ? list : lists_path, class: 'btn btn-primary' %>

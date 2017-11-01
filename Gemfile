@@ -51,10 +51,14 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers', '3.1.1'
   gem 'test-unit'
-  gem "database_cleaner"
   gem "rspec-rails"
+  gem 'pry'
+  gem 'pry-nav'
 end
 
+group :test do
+  gem "database_cleaner"
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
