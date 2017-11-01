@@ -51,6 +51,8 @@ group :development, :test do
   gem 'shoulda'
   gem 'shoulda-matchers', '3.1.1'
   gem 'test-unit'
+  gem "database_cleaner"
+  gem "rspec-rails"
 end
 
 group :development do
