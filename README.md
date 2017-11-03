@@ -46,7 +46,7 @@ Test 1: In the list show page. Ensure the items are displayed in ascending order
 
 Bonus Test:(Not required, but if you have time give it a shot) Create a toggle to change between ascending and descending order.
 
-~~Story 3 ~~
+~~Story 3~~
 
 ~~***Bonus - ___complete only if you have time___***~~
 
