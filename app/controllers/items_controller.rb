@@ -13,6 +13,7 @@ class ItemsController < ApplicationController
   end
 
   private
+      
     def set_list
       @list = List.find(params[:list_id])
     end
