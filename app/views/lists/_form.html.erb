@@ -19,8 +19,8 @@
 
   <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :list_name, class: 'form-control' %>
-    <%= content_tag(:small, 'Name of your new list', class: 'form-text text-muted') %>
+    <%= form.text_area :description, id: :list_name, class: 'form-control', :minlength => 6%>
+    <%= content_tag(:small, 'Describe the list', class: 'form-text text-muted') %>
   </div>
 
   <div class="actions">
